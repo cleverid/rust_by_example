@@ -64,4 +64,15 @@ mod tests {
         let k1 = map.get("key3").ok_or_else(|| "не найден ключ key3".to_string());
         println!("{:?}", k1);
     }
+
+    #[test]
+    fn iterate_by_link() {
+        let mut map = HashMap::new();
+        map.insert("key1".to_string(), "1".to_string());
+        map.insert("key2".to_string(), "2".to_string());
+
+        for (key, value) in &map {
+            println!("{:?}:{:?}", key, value);
+        }
+    }
 }
