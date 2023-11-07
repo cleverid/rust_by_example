@@ -1,6 +1,6 @@
 #[cfg(test)]
 mod tests {
-    use std::{collections::HashMap, error::Error};
+    use std::collections::HashMap;
 
     #[test]
     fn create_remove_get() {
